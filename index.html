@@ -4,15 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Arshi Chadha — AI Security</title>
-<meta name="description" content="Arshi Chadha is an AI security researcher and Senior PSIRT engineer at Zscaler. Founder of Breaking Models, a monthly AI security meetup in the Bay Area. OWASP LLM Top 10 co-lead and BSides Las Vegas 2026 speaker." />
+<title>Arshi Chadha · AI Security</title>
+<meta name="description" content="Arshi Chadha is an AI security researcher and Senior PSIRT engineer at Zscaler with 8+ years in security. Founder of Breaking Models, a monthly AI security meetup in the Bay Area. OWASP LLM Top 10 co-lead and BSides Las Vegas 2026 speaker." />
 <link rel="canonical" href="https://arshichadha.com/" />
-<meta property="og:title" content="Arshi Chadha — AI Security" />
-<meta property="og:description" content="AI security researcher. Founder of Breaking Models, a monthly AI security meetup in the Bay Area." />
+<meta property="og:title" content="Arshi Chadha · AI Security" />
+<meta property="og:description" content="AI security researcher, 8+ years in security. Founder of Breaking Models, a monthly AI security meetup in the Bay Area." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://arshichadha.com/" />
 <meta property="og:image" content="https://arshichadha.com/breaking-models.jpg" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♞</text></svg>" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♛</text></svg>" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +26,7 @@
   "jobTitle": "Senior PSIRT Engineer & AI Security Researcher",
   "worksFor": { "@type": "Organization", "name": "Zscaler" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Carnegie Mellon University" },
-  "knowsAbout": ["AI Security", "LLM Security", "Incident Response", "Coordinated Disclosure", "OWASP Top 10 for LLM Applications"],
+  "knowsAbout": ["AI Security", "LLM Security", "Incident Response", "Coordinated Disclosure", "OWASP Top 10 for LLM Applications", "Chess"],
   "url": "https://arshichadha.com/",
   "email": "mailto:arshilife16@gmail.com",
   "sameAs": [
@@ -54,6 +54,17 @@
     font-size: 1.0625rem;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: -140px; left: 50%;
+    transform: translateX(-50%);
+    width: 720px; height: 480px;
+    background: radial-gradient(circle, rgba(226, 163, 62, 0.08) 0%, transparent 65%);
+    pointer-events: none;
   }
 
   ::selection { background: var(--chai); color: var(--bg); }
@@ -62,6 +73,7 @@
     max-width: 640px;
     margin: 0 auto;
     padding: clamp(56px, 10vh, 104px) 24px 48px;
+    position: relative;
   }
 
   h1 {
@@ -72,6 +84,16 @@
     letter-spacing: -0.01em;
     margin-bottom: 8px;
   }
+
+  h1 .queen {
+    color: var(--chai);
+    display: inline-block;
+    font-size: 0.82em;
+    margin-right: 12px;
+    transform: translateY(-3px);
+    transition: transform 0.35s ease;
+  }
+  h1:hover .queen { transform: translateY(-3px) rotate(-14deg); }
 
   .role { color: var(--sand); margin-bottom: 36px; }
 
@@ -127,18 +149,24 @@
     color: var(--sand);
     font-size: 0.85rem;
   }
+  footer .q { color: var(--chai); }
+
+  @media (prefers-reduced-motion: reduce) {
+    h1 .queen { transition: none; }
+  }
 </style>
 </head>
 <body>
 
 <main>
-  <h1>Arshi Chadha</h1>
+  <h1><span class="queen" aria-hidden="true">♛</span>Arshi Chadha</h1>
   <p class="role">AI security researcher · Senior PSIRT Engineer, Zscaler</p>
 
   <p>
-    I'm passionate about AI security. I handle product security incident response
-    at Zscaler, and I spend the rest of my time researching how AI systems get
-    attacked — and what to do after they do.
+    I've spent 8+ years in security. These days I run product security incident
+    response at Zscaler, and the rest of my time goes into studying how AI
+    systems get attacked, and what to do after they do. Most AI security work
+    stops at the jailbreak. Mine starts there.
   </p>
 
   <h2>Breaking <em>Models</em></h2>
@@ -150,27 +178,43 @@
 
   <p>
     In 2026 I single-handedly started Breaking Models, an AI security meetup in
-    the Bay Area. The first session was ten people around a table at Hacker Dojo.
-    Now it's a full house every month — engineers, researchers, founders, and
-    security leaders who show up to break AI systems together: prompt injection,
-    RAG poisoning, embedding attacks, live demos, real CVEs.
+    the Bay Area. The first session was ten people around a table at Hacker
+    Dojo. Now it's a full house every month: engineers, researchers, founders,
+    and security leaders who show up to break AI systems together. Prompt
+    injection, RAG poisoning, embedding attacks, live demos, real CVEs.
   </p>
   <p>
-    Talks first, then open floor. Beginner-friendly, discussion-heavy, and no
+    Talks first, then open floor. Beginner friendly, discussion heavy, and no
     vendor pitches, ever. Want to attend or give a talk? Write to
     <a href="mailto:aisecurityinbay@proton.me">aisecurityinbay@proton.me</a>.
   </p>
 
-  <h2>A few things about me</h2>
+  <h2>Research, reviews, <em>rabbit holes</em></h2>
+  <p>
+    If you're working on AI security and want a collaborator, a co-author, or a
+    second pair of eyes on a draft, my inbox is open. I review papers, CFP
+    submissions, and half-finished exploit ideas with equal enthusiasm. The
+    best emails I get start with "this might be a dumb idea, but".
+  </p>
+
+  <h2>A few things <em>about me</em></h2>
   <ul>
-    <li>Co-Lead, LLM08: Vector &amp; Embedding Weaknesses — OWASP Top 10 for LLM Applications (2026)</li>
-    <li>Speaker, BSides Las Vegas 2026 — "After the Jailbreak," a PSIRT playbook for agentic AI</li>
-    <li>MS in Information Security, Carnegie Mellon University</li>
-    <li>Co-inventor on a granted US patent (Zscaler)</li>
+    <li>Co-Lead of LLM08 (Vector and Embedding Weaknesses) in the OWASP Top 10 for LLM Applications, 2026</li>
+    <li>Speaker at BSides Las Vegas 2026: "After the Jailbreak", a PSIRT playbook for agentic AI</li>
+    <li>MS in Information Security from Carnegie Mellon University</li>
+    <li>Co-inventor on a granted US patent at Zscaler</li>
   </ul>
 
-  <h2>Say hi</h2>
+  <h2>Off the <em>clock</em></h2>
   <p>
+    Chess, mostly. Also old Bollywood soundtracks, and chai strong enough to
+    wake a night-shift SOC analyst. Chess challenges welcome, in games and in
+    research.
+  </p>
+
+  <h2>Say <em>hi</em></h2>
+  <p>
+    For research, Breaking Models, speaking invites, or a game of chess:
     <a href="mailto:arshilife16@gmail.com">arshilife16@gmail.com</a> ·
     <a href="https://www.linkedin.com/in/arshichadha/" rel="me noopener" target="_blank">LinkedIn</a> ·
     <a href="https://github.com/arshi016" rel="me noopener" target="_blank">GitHub</a>
@@ -178,7 +222,7 @@
 </main>
 
 <footer>
-  © 2026 Arshi Chadha · fueled by chai ♞
+  © 2026 Arshi Chadha · fueled by chai · queen's gambit, <span class="q">accepted ♛</span>
 </footer>
 
 </body>
