@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Research Crawler · Arshi Chadha</title>
+<meta name="description" content="Disclosure and opt-out information for ArshiResearchBot, an academic measurement crawler studying how websites declare policies toward automated and AI agents. It reads only public policy files and never collects page content." />
+<link rel="canonical" href="https://arshichadha.com/crawler.html" />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Research Crawler · Arshi Chadha" />
+<meta property="og:description" content="Disclosure and opt-out for ArshiResearchBot, an academic crawler that reads only public policy files (robots.txt, llms.txt, and related well-known files)." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://arshichadha.com/crawler.html" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♛</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Spline+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #121009;
+    --ink: #efe7db;
+    --sand: #a0937b;
+    --chai: #e2a33e;
+    --line: rgba(239, 231, 219, 0.14);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Spline Sans", -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: -140px; left: 50%;
+    transform: translateX(-50%);
+    width: 720px; height: 480px;
+    background: radial-gradient(circle, rgba(226, 163, 62, 0.08) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  ::selection { background: var(--chai); color: var(--bg); }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: clamp(56px, 10vh, 104px) 24px 48px;
+    position: relative;
+  }
+
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.1rem, 6vw, 2.9rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  h1 .queen {
+    color: var(--chai);
+    display: inline-block;
+    font-size: 0.82em;
+    margin-right: 12px;
+    transform: translateY(-3px);
+  }
+
+  .role { color: var(--sand); margin-bottom: 36px; }
+
+  h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin: 46px 0 12px;
+  }
+  h2 em { font-style: italic; color: var(--chai); }
+
+  p { margin-bottom: 16px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0 0 16px 22px; }
+  li { margin-bottom: 8px; }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+    background: rgba(239, 231, 219, 0.06);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: var(--chai);
+  }
+
+  a { color: var(--chai); text-decoration: none; border-bottom: 1px solid var(--line); }
+  a:hover { border-color: var(--chai); }
+  a:focus-visible { outline: 2px solid var(--chai); outline-offset: 3px; border-radius: 2px; }
+
+  .back { display: inline-block; margin-top: 44px; color: var(--sand); font-size: 0.95rem; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--sand);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="queen">♛</span>Research Crawler</h1>
+  <p class="role">Disclosure &amp; opt-out — <em>ArshiResearchBot</em></p>
+
+  <p>
+    <code>ArshiResearchBot</code> is an academic measurement crawler operated as part of a
+    peer-reviewed research study on how websites declare policies toward automated and
+    AI agents. The study surveys the deployment of public policy artefacts across the web.
+  </p>
+
+  <h2>What it <em>does</em></h2>
+  <ul>
+    <li>Requests a small set of publicly available, well-known policy files: <code>robots.txt</code>, <code>llms.txt</code>, <code>ai.txt</code>, <code>tdmrep.json</code>, and similar declaration files.</li>
+    <li>Reads only these policy files to measure whether and how sites declare agent policies.</li>
+    <li>Honours your <code>robots.txt</code>: if you disallow <code>ArshiResearchBot</code>, it will not fetch.</li>
+    <li>Crawls politely — low request rates, well-spaced, one request per file.</li>
+  </ul>
+
+  <h2>What it <em>does not</em> do</h2>
+  <ul>
+    <li>It does not collect, store, index, or process page content, text, or media.</li>
+    <li>It does not attempt logins, forms, or access to non-public areas.</li>
+    <li>It does not sell, share, or republish any data; results are reported only as aggregate statistics.</li>
+  </ul>
+
+  <h2>How to <em>opt out</em></h2>
+  <p>
+    To exclude your site from this study, do either of the following:
+  </p>
+  <ul>
+    <li>Add to your <code>robots.txt</code>:<br /><code>User-agent: ArshiResearchBot</code><br /><code>Disallow: /</code></li>
+    <li>Or email <a href="mailto:research@arshichadha.com">research@arshichadha.com</a> with your domain, and it will be removed from the crawl list.</li>
+  </ul>
+
+  <h2>Who runs it</h2>
+  <p>
+    Principal investigator: Arshi Chadha, AI security researcher.
+    Questions, concerns, or opt-out requests:
+    <a href="mailto:research@arshichadha.com">research@arshichadha.com</a>.
+  </p>
+
+  <a class="back" href="/">← arshichadha.com</a>
+
+  <footer>
+    This page exists so that site operators encountering <code>ArshiResearchBot</code> in
+    their logs can understand its purpose and opt out. Last updated 2026.
+  </footer>
+</main>
+</body>
+</html>
